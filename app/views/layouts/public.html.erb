@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Massanutten Property Owners Association : <%= @page_title || '' %> </title>
+  <%= csrf_meta_tag %>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="Massanutten Property Owners Association. A resort community nestled in the heart of the Shenandoah Valley. We have all kinds of sports and recreation going on such as golf, skiing, snow tubing, fishing and many others, all located within the natural beauty of Massanutten Mountain."/>
+  <meta name="keywords" content="Massanutten, Property Owners Association, Resort, Lodging, Rentals, Timeshares, Housing, Golfing, Skiing, Mountain, Shenandoah Valley, Vacation, Hiking, Outdoors, Snowtubing, Weekend-Getaway, Great Eastern, Snowboarding, Mountain Biking, Accommodations, Recreation, Virginia Mountains, Virginia Vacations, Harrisonburg, Lodging, Condos"/>
+  <meta name="robots" content="index, nofollow"/>
+  <meta name="robots" content="noarchive"/>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+</head>
+
+<body>
+<div id="doc">
+<div class="yui3-g" id="hd">
+    <%= render 'layouts/header' %>
+</div>
+
+
+  <div class="yui3-g">  <div id="breadcrumbs" class="yui3-u-1"> <div class="content clearfix ">
+    <p class="left">You are here:</p><%=render_navigation  :renderer => :breadcrumbs, :join_with => " &gt;&gt; ", :static_leaf=>true %></div> </div>
+
+  </div>
+  <div class="yui3-u date_today">
+    <% t=Time.now.utc.in_time_zone("Eastern Time (US & Canada)").to_formatted_s(:long)%><%= t %> </div>
+
+
+  <div class="yui3-g" id="layout">
+    <div class="yui3-u" id="nav">
+    <div class="content"><%= image_tag('massanutten-bear-top.png') %>
+      <nav>
+        <%= render_navigation :level => 2..3, :expand_all => true %>
+        <!-- end nav --></nav> <%= image_tag('massanutten-bear-bottom.png') %>
+
+    </div>
+  </div>
+  <div class="yui3-u" id="main">
+    <div class="content">
+
+      <section>
+        <%= yield %></section>
+    </div>
+  </div>
+  <div class="yui3-u" id="extra">
+    <div class="content">
+
+      <div class="sidebox">
+      <div class="hd">
+        <h2 class="no-toc">MPOA Information</h2>
+      </div>
+
+      <div class="bd">
+        <ul class="examples">
+
+          <li>
+            <a href="#">MPSC Notice to Greenview Hills Property Owners</a>
+          </li>
+
+          <li>
+            NOTICE TO PROPERTY OWNERS
+            <a href="#">more</a>
+          </li>
+
+          <li >
+            <a href="#">Massanutten Women's Club Yard Sale</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+      <br>
+      <div class="sidebox">
+        <div class="hd">
+          <h2 class="no-toc">Calendar of Events</h2>
+        </div>
+
+        <div class="bd">
+          <ul class="examples">
+
+            <li>  Meet the Candidates Night
+              <a href="#">read more</a>
+            </li>
+
+            <li>
+              Used Book Sale
+              <a href="#">read more</a>
+            </li>
+
+
+
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="yui3-g" id="ft">
+  <footer>
+  <div class="yui3-u-1">
+    <div class="content">
+      <%= render 'layouts/footer' %>
+    </div>
+  </div>
+  </footer>
+</div>
+
+</div>
+</body>
+</html>
