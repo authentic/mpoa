@@ -1,17 +1,13 @@
 Mpoa::Application.routes.draw do
-  get "static_pages/home"
 
-  get "static_pages/help"
 
-  root :to => "home#index"
+  root :to => "static_pages#home"
   match 'admin', :to=> 'access#menu'
   match 'show/:id', :to => 'public#show'
 
 
   Rails.application.routes.draw do
-  get "static_pages/home"
 
-  get "static_pages/help"
 
     namespace :ckeditor, :only => [:index, :create, :destroy] do
       resources :pictures
