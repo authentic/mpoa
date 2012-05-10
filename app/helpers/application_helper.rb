@@ -15,4 +15,13 @@ module ApplicationHelper
   def error_messages_for(object)
     render(:partial =>'shared/error_messages', :locals => {:object=>object} )
   end
+
+  def full_title(page_title)
+    base_title = "Massanutten Property Owners Association"
+    if page_title.empty?
+      base_title
+    else
+      "#{base_title} ::: #{page_title}"
+    end
+  end
 end

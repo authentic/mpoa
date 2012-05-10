@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Massanutten Property Owners Association : <%= @page_title || '' %> </title>
+  <title><%= full_title(yield(:page_title))%> </title>
   <%= csrf_meta_tag %>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <meta name="description" content="Massanutten Property Owners Association. A resort community nestled in the heart of the Shenandoah Valley. We have all kinds of sports and recreation going on such as golf, skiing, snow tubing, fishing and many others, all located within the natural beauty of Massanutten Mountain."/>

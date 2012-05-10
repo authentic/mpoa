@@ -1,4 +1,4 @@
-<% @page_title="Delete Admin User: #{@admin_user.name}" %>
+<% provide(:page_title, "Delete Admin User: #{@admin_user.name}") %>
 <%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
 <div class="user delete">
   <h2>Delete Admin User</h2>

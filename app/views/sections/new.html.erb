@@ -1,4 +1,4 @@
-<% @page_title="New Section" %>
+<% provide(:page_title, "New Section") %>
 <%= link_to("<< Back to Sections List",{:action=> 'list', :page_id => @page.id}, :class => 'back-link') %>
 
 <div class="section new">

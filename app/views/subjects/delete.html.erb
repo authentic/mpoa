@@ -1,4 +1,4 @@
-<% @page_title="Delete Subject" %>
+<% provide(:page_title, "Delete Subject: #{@subject.name}") %>
 <%= link_to("<< Back to Menu", {:controller => 'access', :action=> 'menu'}, :class => 'back-link') %>
 <%= link_to("<< Back to Subjects List", {:action => 'list'}, :class => 'back-link') %>
 <div class="subject delete">

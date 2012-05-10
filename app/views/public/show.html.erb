@@ -1,4 +1,4 @@
-<% @page_title=@page.name %>
+<% provide(:page_title, (@page.name)) %>
 <h1><%= @page.name %></h1>
 
 <% @page.sections.visible.sorted.each do |section| %>

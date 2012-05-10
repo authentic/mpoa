@@ -1,4 +1,4 @@
-<% @page_title = "Delete Section: #{@section.name}" %>
+<% provide(:page_title, "Delete Section: #{@section.name}") %>
 <%= link_to("<< Back to Sections List", {:action => 'list', :page_id => @page.id}, :class => 'back-link') %>
 <div class="section delete">
   <h2>Delete Section</h2>

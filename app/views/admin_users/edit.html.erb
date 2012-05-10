@@ -1,4 +1,4 @@
-<% @page_title="Edit Admin User: #{@admin_user.name}" %>
+<% provide(:page_title, "Edit Admin User: #{@admin_user.name}") %>
 <%= link_to("<< Back to list", {:action=> 'list'}, :class => 'back-link') %>
 
 <div class="user edit">

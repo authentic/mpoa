@@ -1,4 +1,4 @@
-<% @page_title="Page Details" %>
+<% provide(:page_title, "Page Details") %>
 
 <%= link_to("<< Back to Pages List", {:action=>'list',:subject_id=>@subject.id}, :class=>'back-link') %>
 

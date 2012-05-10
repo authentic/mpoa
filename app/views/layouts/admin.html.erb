@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>MPOA : The Administration Functions : <%= @page_title || 'Admin functions' %> </title>
+  <title><%= full_title(yield(:page_title))%></title>
   <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
   <meta name="description" content="Massanutten Property Owners Association. A resort community nestled in the heart of the Shenandoah Valley. We have all kinds of sports and recreation going on such as golf, skiing, snow tubing, fishing and many others, all located within the natural beauty of Massanutten Mountain."/>
   <meta name="keywords" content="Massanutten, Property Owners Association, Resort, Lodging, Rentals, Timeshares, Housing, Golfing, Skiing, Mountain, Shenandoah Valley, Vacation, Hiking, Outdoors, Snowtubing, Weekend-Getaway, Great Eastern, Snowboarding, Mountain Biking, Accommodations, Recreation, Virginia Mountains, Virginia Vacations, Harrisonburg, Lodging, Condos"/>
@@ -32,7 +32,8 @@
       <!-- end #primary --></div>
     <!-- end #content --></div>
   <div id="footer" >
-    <p id="copyright"> Copyright &copy;2011&ndash;2011 Massanutten Property Owners Association, Inc. All Rights
+    <p id="copyright"> Copyright &copy;2011-
+      <% t=Time.now %><%= t.year %>. Massanutten Property Owners Association, Inc. All Rights
       Reserved.
       <br/>Designed by Hauze.</p>
     <!-- end #footer --> </div>

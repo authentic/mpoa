@@ -26,3 +26,4 @@ config/mongrel_cluster.rb
 spec
 .sass-cache/
 public/assets/
+bundler_stubs/

@@ -1,4 +1,4 @@
-<% @page_title="Edit Section" %>
+<% provide(:page_title, "Edit Section: #{@section.name}") %>
 <%= link_to("<< Back to Sections List",{:action=> 'list', :page_id => @page.id}, :class => 'back-link') %>
 
 <div class="section edit">

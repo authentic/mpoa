@@ -1,4 +1,4 @@
-<% @page_title="Pages List" %>
+<% provide(:page_title, "Pages List") %>
 <%= link_to("<< Back to Subject List", {:controller => 'subjects', :action=> 'list'}, :class => 'back-link') %>
 <div class="page list">
   <h2>Pages</h2>
